@@ -1,25 +1,20 @@
 # 🦎 ConspiraCoin ($CNSP)
 
-Welcome to the official home of **ConspiraCoin** – the only coin powered by ancient lizard energy and deep crypto memes.
+The official chaotic home of **ConspiraCoin** – meme coin for lizard enjoyers, degens, and conspiracy theorists.
 
----
+## 🚀 Features
 
-## 🚀 What is ConspiraCoin?
+- **Layered, oversized lizard hero gallery**
+- **Bursty colors, glowing chaos, and ridiculous meme energy**
+- **Scrolling conspiracy marquee with wild messages**
+- **Wiggly, glowing buttons to buy and follow**
+- **Degenerate FAQ by Dr. Mendelson**
+- **Footer with social links (X and pump.fun)**
+- **All images in the `/assets` folder**
 
-ConspiraCoin ($CNSP) is a meme/crypto conspiracy project built for fun, chaos, and crypto degenerates who know the lizards are watching.
+## 📁 Assets
 
-- **Chaotic hero section with layered lizard art**
-- **Bulky, oversized fonts and glowing effects**
-- **Scrolling conspiracy crypto marquee**
-- **Animated buttons to buy and follow**
-- **FAQ by Dr. Mendelson: The science of conspiracy obsessions**
-- **Mobile & desktop ready**
-- **All images in** `/assets`
-
----
-
-## 🖼️ Assets
-Put these inside the `/assets` folder:
+Place these images in an `assets` folder:
 - `logo.png`
 - `1lizard.png`
 - `2lizard.png`
@@ -27,34 +22,17 @@ Put these inside the `/assets` folder:
 - `4lizard.png`
 - `5lizard.png`
 
----
-
 ## 💻 How to Run
 
-Just open `index.html` in your browser or deploy using GitHub Pages.
-
-**All styles (`style.css`) and the animation script (`scripts.js`) are included.**
-
----
-
-## 🎉 Features
-
-- Oversized, glowing, chaotic UI for instant lizard energy
-- Funny buttons with wiggle/glow animations
-- Extra-large lizard images
-- FAQ with real science (and fake news)
-- Footer with social links
-- Marquee with meme messages
-
----
+1. **Open `index.html` in your browser**
+2. Or **deploy to GitHub Pages**  
+   Everything links correctly to `style.css` and `scripts.js`.
 
 ## 🦎 Links
 
 - [Follow on X](https://x.com/kalleicey1)
 - [Buy $CNSP](https://pump.fun/)
 
----
-
 ## 👽 License
 
-MIT - Reptilians welcome.
+MIT – Run wild, lizards!
