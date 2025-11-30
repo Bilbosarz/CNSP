@@ -47,32 +47,39 @@
       align-items: center;
       margin: 0 auto 18px auto;
       position: relative;
-      min-height: 165px;
+      min-height: 320px;
       z-index: 3;
       pointer-events: none;
-      filter: drop-shadow(0 0 20px var(--yellow));
+      filter: drop-shadow(0 0 32px var(--yellow));
     }
     .lizard-gallery img {
-      width: 136px;
-      height: 136px;
+      width: 260px;
+      height: 260px;
       object-fit: cover;
-      margin-left: -55px;
-      margin-right: -55px;
-      border-radius: 22px;
-      border: 5px solid var(--yellow);
-      filter: brightness(1.2) drop-shadow(0 3px 11px var(--red));
-      box-shadow: 0 0 26px 10px var(--accent-cyan), 0 0 10px 2px var(--accent-green);
-      transition: transform 0.22s cubic-bezier(.63,1.48,.6,1.12), filter 0.18s;
+      margin-left: -90px;
+      margin-right: -90px;
+      border-radius: 30px;
+      border: 10px solid var(--yellow);
+      filter: brightness(1.25) drop-shadow(0 8px 32px var(--red));
+      box-shadow: 0 0 40px 18px var(--accent-cyan), 0 0 30px 9px var(--accent-green);
+      transition: transform 0.23s cubic-bezier(.63,1.48,.6,1.12), filter 0.18s, box-shadow 0.22s;
       will-change: transform, filter;
       pointer-events: auto;
       background: var(--dark);
       cursor: pointer;
+      z-index: 3;
     }
     .lizard-gallery img:hover {
-      transform: scale(1.23) rotate(-13deg);
-      filter: brightness(1.44) drop-shadow(0 0 35px var(--yellow)) drop-shadow(0 0 15px var(--red));
-      box-shadow: 0 0 44px 19px var(--red);
-      z-index: 8 !important;
+      transform: scale(1.33) rotate(-16deg);
+      filter: brightness(1.5) drop-shadow(0 0 65px var(--yellow)) drop-shadow(0 0 35px var(--red));
+      box-shadow: 0 0 85px 30px var(--red), 0 0 60px 11px var(--accent-cyan);
+      z-index: 10 !important;
+    }
+    .lizard-gallery img:nth-child(3) {
+      z-index: 6;
+      filter: brightness(1.33) drop-shadow(0 0 45px var(--yellow));
+      box-shadow: 0 0 80px 35px var(--accent-cyan), 0 0 48px 14px var(--accent-green);
+      transform: scale(1.15) rotate(-7deg);
     }
     .hero-ticker {
       display: inline-block;
@@ -241,18 +248,24 @@
       text-shadow: 0 3px 38px var(--yellow);
       transform: rotate(-8deg) scale(1.14);
     }
+    /* Responsive: make lizards bigger than usual on mobile too */
+    @media (max-width: 1200px) {
+      .lizard-gallery img {width: 180px; height:180px; margin-left:-45px; margin-right:-45px;}
+      .lizard-gallery {min-height:180px;}
+    }
     @media (max-width: 900px) {
       .logo {width: 100px;}
-      .lizard-gallery img {width: 88px; height:88px; margin-left:-28px; margin-right:-28px;}
+      .lizard-gallery img {width: 128px; height:128px; margin-left:-22px; margin-right:-22px;}
+      .lizard-gallery {min-height:128px;}
       .faq-section {padding: 24px 10px; max-width:98vw;}
       .hero-main { font-size:2.05rem;}
       .faq-title { font-size: 1.05rem;}
       .hero-ticker { font-size:1.23rem; padding:7px 13px;}
     }
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       .logo {width:64px;}
-      .lizard-gallery {min-height:69px;}
-      .lizard-gallery img {width:65px; height:65px; margin-left:-13px; margin-right:-13px;}
+      .lizard-gallery {min-height:80px;}
+      .lizard-gallery img {width:62px; height:62px; margin-left:-8px;margin-right:-8px;}
       .hero-main {font-size:1.18rem;}
       .hero-ticker {font-size:0.89rem; padding:5px 8px;}
       .hero-desc {font-size:0.87rem;}
