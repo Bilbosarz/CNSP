@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ConspiraCoin – $CNSP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --yellow: #ffd700;
+      --red: #e6242e;
+      --dark: #161a1c;
+      --accent-cyan: #1fe6ff;
+      --accent-green: #2afc5f;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--dark);
+      color: var(--yellow);
+      font-family: 'Comic Sans MS', 'Impact', 'Arial Black', cursive, sans-serif;
+      overflow-x: hidden;
+    }
+    .hero {
+      position: relative;
+      z-index: 2;
+      width: 100vw;
+      padding: 0 0 32px 0;
+      background: linear-gradient(115deg, #191a34 50%, #441223 100%);
+      text-align: center;
+      box-shadow: 0 0 22px 8px var(--red);
+    }
+    .logo {
+      width: 140px;
+      height: auto;
+      margin-top: 38px;
+      margin-bottom: 13px;
+      filter: drop-shadow(0 0 22px var(--yellow)) drop-shadow(0 2px 9px var(--red));
+      animation: logoUpDown 1.6s infinite alternate;
+    }
+    @keyframes logoUpDown {
+      from { transform: translateY(-8px);}
+      to { transform: translateY(12px);}
+    }
+    .lizard-gallery {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 18px auto;
+      position: relative;
+      min-height: 165px;
+      z-index: 3;
+      pointer-events: none;
+      filter: drop-shadow(0 0 20px var(--yellow));
+    }
+    .lizard-gallery img {
+      width: 136px;
+      height: 136px;
+      object-fit: cover;
+      margin-left: -55px;
+      margin-right: -55px;
+      border-radius: 22px;
+      border: 5px solid var(--yellow);
+      filter: brightness(1.2) drop-shadow(0 3px 11px var(--red));
+      box-shadow: 0 0 26px 10px var(--accent-cyan), 0 0 10px 2px var(--accent-green);
+      transition: transform 0.22s cubic-bezier(.63,1.48,.6,1.12), filter 0.18s;
+      will-change: transform, filter;
+      pointer-events: auto;
+      background: var(--dark);
+      cursor: pointer;
+    }
+    .lizard-gallery img:hover {
+      transform: scale(1.23) rotate(-13deg);
+      filter: brightness(1.44) drop-shadow(0 0 35px var(--yellow)) drop-shadow(0 0 15px var(--red));
+      box-shadow: 0 0 44px 19px var(--red);
+      z-index: 8 !important;
+    }
+    .hero-ticker {
+      display: inline-block;
+      margin-bottom: 8px;
+      background: var(--red);
+      color: var(--yellow);
+      font-size: 2.3rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      padding: 12px 30px;
+      border-radius: 21px;
+      border: 9px solid var(--yellow);
+      text-shadow: 0 0 18px var(--yellow), 0 1px 3px var(--dark);
+      box-shadow: 0 3px 23px var(--accent-cyan);
+      animation: tickerShake 2s infinite alternate;
+    }
+    @keyframes tickerShake {
+      0% { transform: translateX(-3px) rotate(-1deg);}
+      60% { transform: translateX(5px) rotate(3deg);}
+      100% { transform: translateX(-2px) rotate(-7deg);}
+    }
+    .hero-main {
+      font-family: 'Impact', 'Arial Black', sans-serif;
+      font-size: 3rem;
+      font-weight: bolder;
+      color: var(--yellow);
+      margin-bottom: 14px;
+      text-shadow: 2px 6px 32px var(--red), 0 0px 15px var(--yellow), 0 0px 2px var(--accent-cyan);
+      letter-spacing: 2px;
+      line-height: 1.08;
+    }
+    .hero-desc {
+      font-size: 1.33rem;
+      color: var(--accent-cyan);
+      font-weight: bold;
+      margin-bottom: 12px;
+      text-shadow: 0 4px 19px var(--yellow), 0 1px 6px var(--red);
+      padding: 0 21px;
+    }
+    .hero-btns {
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+    .hero-btn {
+      background: linear-gradient(90deg,var(--yellow) 44%,var(--red) 100%);
+      color: #181818;
+      font-size: 1.17rem;
+      font-family: 'Impact', 'Arial Black', 'Comic Sans MS', cursive, sans-serif;
+      font-weight: bold;
+      padding: 21px 44px;
+      border-radius: 27px;
+      border: 7px solid var(--accent-cyan);
+      box-shadow: 0 0 22px 12px var(--red), 0 0 8px 2px var(--yellow);
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.19s, box-shadow 0.19s, filter 0.16s;
+      display: inline-block;
+      animation: btnWiggle 0.33s infinite alternate cubic-bezier(.5,2.4,.2,1.2);
+      filter: brightness(1.14);
+      margin-bottom: 5px;
+      z-index: 15;
+      position: relative;
+    }
+    .hero-btn:hover {
+      transform: scale(1.13) rotate(-6deg);
+      box-shadow: 0 0 58px 24px var(--accent-cyan), 0 0 9px 5px var(--yellow);
+      filter: brightness(1.23) drop-shadow(0 0 19px var(--yellow));
+      z-index: 25 !important;
+    }
+    @keyframes btnWiggle {
+      0% { transform: rotate(-7deg);}
+      70% { transform: rotate(13deg);}
+      100% { transform: rotate(-5deg);}
+    }
+    .marquee-section {
+      width: 100vw;
+      overflow-x: hidden;
+      background: var(--red);
+      color: var(--yellow);
+      font-family: 'Impact', 'Comic Sans MS', cursive, sans-serif;
+      font-weight: bold;
+      font-size: 1.33rem;
+      text-shadow: 0 1px 9px var(--yellow), 0 0px 4px var(--accent-cyan);
+      border-top: 5px solid var(--yellow);
+      border-bottom: 6px solid var(--accent-cyan);
+      margin-top: 2px;
+      margin-bottom: 24px;
+      box-shadow: 0 3px 21px var(--red), 0 1px 14px var(--accent-cyan);
+      position: relative;
+      z-index: 12;
+    }
+    .marquee {
+      display: inline-block;
+      white-space: nowrap;
+      animation: marqueeMove 18s linear infinite;
+      padding-left: 40vw;
+    }
+    @keyframes marqueeMove {
+      from { transform: translateX(0);}
+      to { transform: translateX(-100vw);}
+    }
+    .faq-section {
+      margin: 38px auto 37px auto;
+      max-width: 700px;
+      background: rgba(25,22,50,0.97);
+      border: 7px solid var(--yellow);
+      border-radius: 23px;
+      box-shadow: 0 0 24px 7px var(--red),0 0 22px 2px var(--accent-cyan);
+      padding: 37px 22px 29px 22px;
+      color: var(--yellow);
+      position: relative;
+      z-index: 3;
+    }
+    .faq-title {
+      font-family: 'Impact', 'Arial Black', 'Comic Sans MS', cursive, sans-serif;
+      font-size: 2.14rem;
+      color: var(--accent-cyan);
+      margin-bottom: 15px;
+      text-shadow: 0 2px 12px var(--yellow),0 1px 4px var(--red);
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+    .faq-body {
+      font-size: 1.16rem;
+      color: var(--yellow);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-shadow: 0 6px 18px var(--red),0 0px 2px var(--yellow);
+      line-height: 1.42;
+      text-align: left;
+      margin-top: 7px;
+      margin-bottom: 3px;
+    }
+    .footer {
+      width: 100vw;
+      background: linear-gradient(90deg, #161a1c 52%, var(--red) 100%);
+      padding: 28px 0 23px 0;
+      text-align: center;
+      border-top: 7px solid var(--yellow);
+      color: var(--accent-cyan);
+      font-family: 'Impact', 'Arial Black', 'Comic Sans MS', cursive, sans-serif;
+      font-size: 1.32rem;
+      text-shadow: 0 2px 18px var(--red),0 2px 4px var(--yellow);
+      position: relative;
+      z-index: 2;
+      letter-spacing: 1px;
+    }
+    .footer-social {
+      margin-top: 11px;
+    }
+    .footer-social a {
+      display: inline-block;
+      margin: 6px 17px 0 17px;
+      font-size: 1.56rem;
+      color: var(--yellow);
+      text-decoration: none;
+      font-weight: bold;
+      text-shadow: 0 2px 17px var(--accent-cyan),0 1px 4px var(--yellow);
+      transition: color 0.17s, text-shadow 0.17s;
+    }
+    .footer-social a:hover {
+      color: var(--accent-green);
+      text-shadow: 0 3px 38px var(--yellow);
+      transform: rotate(-8deg) scale(1.14);
+    }
+    @media (max-width: 900px) {
+      .logo {width: 100px;}
+      .lizard-gallery img {width: 88px; height:88px; margin-left:-28px; margin-right:-28px;}
+      .faq-section {padding: 24px 10px; max-width:98vw;}
+      .hero-main { font-size:2.05rem;}
+      .faq-title { font-size: 1.05rem;}
+      .hero-ticker { font-size:1.23rem; padding:7px 13px;}
+    }
+    @media (max-width: 600px) {
+      .logo {width:64px;}
+      .lizard-gallery {min-height:69px;}
+      .lizard-gallery img {width:65px; height:65px; margin-left:-13px; margin-right:-13px;}
+      .hero-main {font-size:1.18rem;}
+      .hero-ticker {font-size:0.89rem; padding:5px 8px;}
+      .hero-desc {font-size:0.87rem;}
+      .hero-btn {padding:12px 13px; border-width:4px; font-size:0.89rem;}
+      .faq-section { font-size:0.98rem;}
+      .footer { font-size:0.93rem; padding:12px 0 7px 0;}
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <img src="assets/logo.png" alt="ConspiraCoin Logo" class="logo">
+    <div class="lizard-gallery">
+      <img src="assets/1lizard.png" alt="Lizard 1">
+      <img src="assets/2lizard.png" alt="Lizard 2">
+      <img src="assets/3lizard.png" alt="Lizard 3">
+      <img src="assets/4lizard.png" alt="Lizard 4">
+      <img src="assets/5lizard.png" alt="Lizard 5">
+    </div>
+    <div class="hero-ticker">$CNSP</div>
+    <div class="hero-main">
+      ConspiraCoin – $CNSP
+    </div>
+    <div class="hero-desc">
+      Funny how there’s actual scientific proof that trenchers + crypto degenerates share one obsession?<br>
+      <span style="color:var(--red);font-size:1.55em;font-weight:bolder;letter-spacing:3px;text-shadow:0 0 22px var(--yellow), 0 1px 10px var(--accent-cyan);">CONSPIRACIES.</span>
+    </div>
+    <div class="hero-btns">
+      <a class="hero-btn" href="https://x.com/kalleicey1" target="_blank" rel="noopener">🐍 Follow on X</a>
+      <a class="hero-btn" href="https://pump.fun/" target="_blank" rel="noopener">🦎 Buy $CNSP</a>
+    </div>
+  </section>
+
+  <section class="marquee-section">
+    <div class="marquee">
+      🦎 CONSPIRACIES 💀 TRCC $CNSP 🚀 LIZARDS EVERYWHERE 🛸 WAKE UP SHEEPLE! 🙀 $CNSP WILL BE THE NEW WORLD ORDER! 🦎🦎🦎 💸 CZ IS ACTUALLY A LIZARD 👽 GOVERNMENTS FEAR $CNSP 🏆 LIZARDS OVERLORDS 🤑 
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="faq-title">
+      Why Do Trenchers and Crypto Enthusiasts Share a Fascination with Conspiracies?<br>
+      <span style="font-size:1rem;">By Dr. A. R. Mendelson, Behavioral Scientist</span>
+    </div>
+    <div class="faq-body">
+      <p>Interestingly, trenchers—those drawn to countercultural, underground lifestyles—and cryptocurrency enthusiasts often share a curious trait: engagement with conspiratorial thinking. Psychological research helps explain this overlap.</p>
+      <p>Both groups operate in environments where mainstream narratives seem opaque or untrustworthy. Trenchers question societal norms, while crypto users navigate decentralized, rapidly evolving financial systems. In such contexts, humans’ natural tendency to detect patterns can foster conspiratorial explanations.</p>
+      <p>Social dynamics further reinforce this tendency. Online communities and subcultural networks amplify alternative theories, strengthened by confirmation bias and the satisfaction of 'uncovering hidden truths.'</p>
+      <p>In short, the shared fascination with conspiracies among these groups isn’t mere coincidence. It reflects a combination of cognitive bias, skepticism of authority, and social reinforcement—an amusing but scientifically explainable connection.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div>
+      &copy; 2025 ConspiraCoin ($CNSP) | Made by lizards for lizards
+    </div>
+    <div class="footer-social">
+      <a href="https://x.com/kalleicey1" target="_blank" rel="noopener">Follow on X 🦎</a>
+    </div>
+  </footer>
+</body>
+</html>
