@@ -1,20 +1,25 @@
 # 🦎 ConspiraCoin ($CNSP)
 
-The official chaotic home of **ConspiraCoin** – meme coin for lizard enjoyers, degens, and conspiracy theorists.
+The official meme lizard chaos portal for **ConspiraCoin** – built for degens, trenchers, and anyone who believes the lizards are watching.
 
-## 🚀 Features
+---
 
-- **Layered, oversized lizard hero gallery**
-- **Bursty colors, glowing chaos, and ridiculous meme energy**
-- **Scrolling conspiracy marquee with wild messages**
-- **Wiggly, glowing buttons to buy and follow**
-- **Degenerate FAQ by Dr. Mendelson**
-- **Footer with social links (X and pump.fun)**
-- **All images in the `/assets` folder**
+## Features
 
-## 📁 Assets
+- **Animated psychedelic background for maximum chaos**
+- **Layered, oversized lizards with meme captions and wiggle**
+- **Colors and hover sfx cranked to 100**
+- **Scrolling emoji conspiracy marquee**
+- **Buttons wiggle, sparkle, and glow**
+- **FAQ (with 🦎 emojis)**
+- **Marching lizards in ribbon/footer**
+- **Fully responsive, deploy-ready**
 
-Place these images in an `assets` folder:
+---
+
+## Assets
+
+Add the following images to `/assets`:
 - `logo.png`
 - `1lizard.png`
 - `2lizard.png`
@@ -22,17 +27,23 @@ Place these images in an `assets` folder:
 - `4lizard.png`
 - `5lizard.png`
 
-## 💻 How to Run
+---
 
-1. **Open `index.html` in your browser**
-2. Or **deploy to GitHub Pages**  
-   Everything links correctly to `style.css` and `scripts.js`.
+## Usage
 
-## 🦎 Links
+1. Open `index.html` in your browser
+2. Or deploy on GitHub Pages!
+3. No build step needed.
+
+---
+
+## Links
 
 - [Follow on X](https://x.com/kalleicey1)
 - [Buy $CNSP](https://pump.fun/)
 
-## 👽 License
+---
 
-MIT – Run wild, lizards!
+## License
+
+MIT – chaos is free.
